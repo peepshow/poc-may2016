@@ -1,0 +1,45 @@
+{
+  "name": "poc-may2016",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "normalize-scss": "~3.0.3",
+    "bourbon": "~4.2.6",
+    "bitters": "~1.1.0",
+    "neat": "~1.7.2",
+    "bootstrap-sass": "~3.3.5",
+    "modernizr": "~2.8.1",
+    "flickity": "^1.2.1",
+    "gsap": "^1.18.4",
+    "scrollmagic": "^2.0.5",
+    "material-colors": "^1.0.0"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "./assets/stylesheets/_bootstrap.scss",
+        "./assets/fonts/bootstrap/*",
+        "./assets/javascripts/bootstrap.js"
+      ]
+    },
+    "flickity": {
+      "main": [
+        "./dist/flickity.css",
+        "./dist/flickity.pkgd.min.js"
+      ]
+    },
+    "scrollmagic": {
+      "main": [
+        "./scrollmagic/uncompressed/ScrollMagic.js",
+        "./scrollmagic/uncompressed/plugins/jquery.ScrollMagic.js",
+        "./scrollmagic/uncompressed/plugins/animation.gsap.js",
+        "./scrollmagic/uncompressed/plugins/debug.addindicators.js"
+      ]
+    },
+    "material-colors": {
+      "main": [
+        "./dist/colors.scss"
+      ]
+    }
+  }
+}
