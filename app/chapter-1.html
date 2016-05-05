@@ -1,0 +1,54 @@
+{% extends "layouts/chapters.njk" %}
+
+
+
+{% block content %}
+
+
+
+<!-- HTML markup for the section right below this code block -->
+<div class="wrap">
+
+  <header id="intro" class="header--chapter">
+    <hgroup>
+      <h1>Chapter 1: <span>What it is.</span></h1>
+    </hgroup>
+  </header>
+
+  <aside class="sidebar">
+    <nav>
+        <ul>
+            <li><a href="#intro"><span class="nav-dot"></span><span class="nav-label">Intro</span></a></li>
+            <li><a href="#theme-1"><span class="nav-dot"></span><span class="nav-label">The Science</span></a></li>
+            <li><a href="#theme-2"><span class="nav-dot"></span><span class="nav-label">The Disease</span></a></li>
+            <li><a href="#theme-3"><span class="nav-dot"></span><span class="nav-label">Impact: Professionals</span></a></li>
+            <li><a href="#theme-4"><span class="nav-dot"></span><span class="nav-label">Impact: Community</span></a></li>
+            <li><a href="#theme-5"><span class="nav-dot"></span><span class="nav-label">Risk Behaviour</span></a></li>
+            <li><a href="#theme-6"><span class="nav-dot"></span><span class="nav-label">Border Challenges</span></a></li>
+            <li><a href="#theme-7"><span class="nav-dot"></span><span class="nav-label">The Research</span></a></li>
+        </ul>
+    </nav>
+  </aside>
+
+  <main class="main" role="main">
+    {% include "includes/chapters/ch1_th1.html" %}
+
+    {% include "includes/chapters/ch1_th2.html" %}
+
+    {% include "includes/chapters/ch1_th3.html" %}
+
+    {% include "includes/chapters/ch1_th4.html" %}
+
+    {% include "includes/chapters/ch1_th5.html" %}
+
+    {% include "includes/chapters/ch1_th6.html" %}
+
+    {% include "includes/chapters/ch1_th7.html" %}
+  </main>
+
+
+</div> <!-- .wrapper -->
+
+
+
+{% endblock %}
