@@ -1,0 +1,215 @@
+/* ============================================ |
+   Overview Header
+*/
+
+.header {
+
+  &__overview {
+  text-align: center;
+  color: #fff;
+  padding: 6em 0 0;
+  position: relative;
+  text-shadow: 0 0 10px rgba(50,50,50,0.4);
+  h1 {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1em;
+    margin: 0.6em 0 0.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+  }
+  h2 {
+    font-size: 2em;
+    font-weight: 400;
+    line-height: 1em;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+  }
+  p {
+    width: 500px;
+    margin: 2em auto 0;
+  }
+  }
+}
+
+nav.chapter-nav {
+  margin-left: 100px;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/187524/chapter_header.png") no-repeat;
+  min-width: 250px;
+  min-height: 70px;
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    li {
+      a {
+        display: block;
+        background: #FFF;
+        min-height: 10px;
+        width: 30px;
+        margin-right: 14px;
+      }
+      &.active a {
+        background: $yellow;
+        min-height: 30px;
+      }
+      &.active a:after {
+        @include triangle(30px 9px, transparent #000, up);
+        bottom: -10px;
+      }
+    }
+  }
+}
+
+
+
+
+/* ============================================ |
+   FLICKERTY CAROUSEL
+*/
+
+.gallery {
+  position: relative;
+  margin-top: 4%;
+  background: transparent;
+}
+.gallery-cell {
+  width: 28%;
+  //height: 500px;
+  //margin-right: 10px;
+  //background: #8C8;
+  &.is-selected {
+    //background: #ED2;
+  }
+}
+/* big buttons, no circle */
+.flickity-prev-next-button {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  top: 90%;
+  border: 1px solid #fff;
+  //background: rgba(255,255,255,0.8);
+}
+/* position outside */
+.flickity-prev-next-button.previous {
+  left: 46%;
+}
+.flickity-prev-next-button.next {
+  right: 46%;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+.flickity-prev-next-button:hover {
+  background: rgba($yellow, 0.5);
+}
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  opacity: 0.5;
+}
+
+
+
+
+
+/* ============================================ |
+   Chapter Cards
+*/
+
+.chapter-card {
+  position: relative;
+  width: 80%;
+  height: 320px;
+  margin: 20px 0 80px 10%;
+  box-shadow: 0 45px 80px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.5s ease-out;
+  transform: scale(0.8, 0.8);
+}
+.is-selected .chapter-card {
+  transform: scale(1);
+}
+
+div[class*="layer-"] {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  transition: 0.1s;
+  text-align: center;
+}
+
+.layer-1 {
+  //background-image: url("https://unsplash.it/400/700");
+  height: 220px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.layer-2 {
+  margin-top: 120px;
+  h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.3em;
+    font-size: 1.2em;
+  }
+}
+
+.layer-3 {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.layer-4 {
+  margin-top: 200px;
+  .skewed {
+    background: $md-deep-purple-500;
+    transform: skewY(-6deg);
+    padding-top: 2em;
+    min-height: 400px;
+    padding: 2em 40px;
+    box-shadow: 0 -20px 70px rgba(50,50,50,0.5);
+    * {
+      transform: skewY(6deg);
+    }
+  }
+}
+
+// Ribbon-1
+.ribbon-1 {
+  width: 40px;
+  height: 30px;
+  background: $yellow;
+  top: 174px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  // &:before {
+  //   @include triangle(15px, darken($yellow, 30%), down-right);
+  //   left: -6px;
+  // }
+  &:after {
+    @include triangle(40px 12px, transparent $yellow, up);
+    bottom: -12px;
+  }
+}

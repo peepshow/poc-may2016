@@ -1,0 +1,32 @@
+// Grid system
+.main {
+  // @include make-col();
+  //
+  // @include media-breakpoint-up(sm) {
+  //   @include make-col-span($main-sm-columns);
+  //   .sidebar-primary & {
+  //     @include make-col-span($main-sm-columns - $sidebar-sm-columns);
+  //   }
+  // }
+}
+.sidebar {
+  // @include make-col();
+  //
+  // @include media-breakpoint-up(sm) {
+  //   @include make-col-span($sidebar-sm-columns);
+  // }
+}
+
+section.lostrow {
+  lost-center: 980px;
+}
+
+.lostquarter {
+  lost-column: 1/4 0;
+  background: #cc3300;
+}
+
+.losthalf {
+  lost-column: 1/2 0;
+  background: #eee333;
+}

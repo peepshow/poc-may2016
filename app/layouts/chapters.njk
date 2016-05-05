@@ -29,19 +29,16 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="wrap">
-      <div class="bg"></div>
 
-      {# <header class="header__overview">
-        <h1>Place of Change What he shit </h1>
-        <h2>Understanding Malaria</h2>
-        <p>Learn where we stand in Vietnam in the fight against infectious disease. And meet the people effeced by the disease.</p>
-      </header> #}
+  {% block header %}
+  {% endblock %}
 
-      {% block content %}
-      {% endblock %}
 
-    </div>
+
+  {% block content %}
+  {% endblock %}
+
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -78,7 +75,6 @@
     <script src="/bower_components/videojs-caption/dist/videojs.caption.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
